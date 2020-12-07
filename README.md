@@ -1,3 +1,3 @@
 # Escape Room Project
 
-[Initial Thoughts](initial_thoughts.png)
+![Initial Thoughts](./initial_thoughts.png)
