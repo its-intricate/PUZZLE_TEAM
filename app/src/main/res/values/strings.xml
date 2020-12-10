@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Anagram</string>
+    <string name="submit">Submit</string>
+    <string name="enter_answer">Enter answer</string>
+    <string name="anagram">anagram</string>
+    <string name="light">LIGHT</string>
+    <string name="lock">lock</string>
+    <string name="unlock">unlock</string>
+    <string name="next_room">NEXT ROOM</string>
+    <string name="start">START CHALLENGE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
