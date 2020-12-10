@@ -53,6 +53,19 @@
             app:layout_constraintVertical_bias="0.046"
             tools:checked="true" />
 
+        <ImageView
+            android:id="@+id/page"
+            android:layout_width="409dp"
+            android:layout_height="529dp"
+            android:src="@drawable/paper"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/darkness"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/darkness"
+            app:layout_constraintTop_toTopOf="@+id/darkness" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

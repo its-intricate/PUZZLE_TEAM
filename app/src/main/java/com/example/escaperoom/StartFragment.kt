@@ -21,23 +21,32 @@ class StartFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentStartBinding>(
             inflater, R.layout.fragment_start, container, false)
-
+        pageView(binding)
         binding.switch1.setOnClickListener {
             if (binding.switch1.isChecked) {
+                pageView(binding)
                 binding.darkness.visibility = INVISIBLE
-                binding.paper.isEnabled = false
             } else {
                 binding.paper.setOnClickListener { view: View ->
                     view.findNavController().navigate(R.id.action_startFragment_to_anagramFragment)
                 }
                 binding.darkness.visibility = VISIBLE
-                binding.paper.isEnabled = true
-
             }
         }
-
-
         return binding.root
+    }
+
+    private fun pageView(binding: FragmentStartBinding) {
+        return binding.paper.setOnClickListener {
+            binding.page.visibility = VISIBLE
+            binding.page.isEnabled = true
+            binding.switch1.visibility = INVISIBLE
+            binding.page.setOnClickListener {
+                binding.page.visibility = INVISIBLE
+                binding.page.isEnabled = false
+                binding.switch1.visibility = VISIBLE
+            }
+        }
     }
 
 }

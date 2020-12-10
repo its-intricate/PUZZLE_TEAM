@@ -1,6 +1,7 @@
 package com.example.escaperoom
 
 import android.view.View
+import android.view.View.INVISIBLE
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.escaperoom.databinding.ActivityGameScreenBinding
@@ -26,15 +27,20 @@ class Story(val gamescr: ActivityGameScreenBinding) {
             "monster" -> monster()
             "attack" -> attack()
             "dead" -> dead()
-//            "goEscapeRoom" -> escape.goEscapeRoom()
             "goTitleScreen" -> goTitleScreen(gamescr)
+            "goNextRoom" -> nextRoom(gamescr)
 
         }
     }
 
     fun goTitleScreen(gamescr: ActivityGameScreenBinding) {
-//        Navigation
-//       Navigation.findNavController(gamescr.view).navigate(R.id.action_gameScreen_to_titleScreen)
+       Navigation.findNavController(gamescr.choiceButton1).navigate(R.id.action_gameScreen_to_titleScreen)
+
+    }
+
+    fun nextRoom(gamescr: ActivityGameScreenBinding) {
+        Navigation.findNavController(gamescr.choiceButton1).navigate(R.id.action_gameScreen_to_nextRoomFragment)
+
     }
 
     fun showAllButtons(){
@@ -130,7 +136,7 @@ class Story(val gamescr: ActivityGameScreenBinding) {
 
         gamescr.choiceButton1.setText("Back")
 
-        gamescr.choiceButton2.setVisibility(View.INVISIBLE)
+        gamescr.choiceButton2.visibility = INVISIBLE
         gamescr.choiceButton3.setVisibility(View.INVISIBLE)
         gamescr.choiceButton4.setVisibility(View.INVISIBLE)
 
@@ -139,15 +145,15 @@ class Story(val gamescr: ActivityGameScreenBinding) {
 
     fun monster(){
         gamescr.gameImageView.setImageResource(R.drawable.monster1)
-        gamescr.gameTextView.setText("You encounter a stranger thing...")
+        gamescr.gameTextView.text = "You encounter a stranger thing..."
 
         masterSword = true
 
-        gamescr.choiceButton1.setText("Attack!")
-        gamescr.choiceButton2.setText("Run!")
+        gamescr.choiceButton1.text = "Attack!"
+        gamescr.choiceButton2.text = "Run!"
 
-        gamescr.choiceButton3.setVisibility(View.INVISIBLE)
-        gamescr.choiceButton4.setVisibility(View.INVISIBLE)
+        gamescr.choiceButton3.visibility = INVISIBLE
+        gamescr.choiceButton4.visibility = INVISIBLE
 
         nextPosition1 = "attack"
         nextPosition2 = "startingPoint"
@@ -155,28 +161,28 @@ class Story(val gamescr: ActivityGameScreenBinding) {
 
     fun attack(){
 
-        if(masterSword==true && killedPlant==true){
+        if(masterSword && killedPlant){
             gamescr.gameImageView.setImageResource(R.drawable.win)
-            gamescr.gameTextView.setTextSize(22F)
-            gamescr.gameTextView.setText("With your legendary Master Sward and experience as a warrior, the monster has no chance to win! \n\n You defeat the Monster and find the key!!")
+            gamescr.gameTextView.textSize = 22F
+            gamescr.gameTextView.text = "With your legendary Master Sward and experience as a warrior, the monster has no chance to win! \n\n You defeat the Monster and find the key!!"
 
-            gamescr.choiceButton1.setText("Next Room")
+            gamescr.choiceButton1.text = "Next Room"
 
-            gamescr.choiceButton2.setVisibility(View.INVISIBLE)
-            gamescr.choiceButton3.setVisibility(View.INVISIBLE)
-            gamescr.choiceButton4.setVisibility(View.INVISIBLE)
+            gamescr.choiceButton2.visibility = INVISIBLE
+            gamescr.choiceButton3.visibility = INVISIBLE
+            gamescr.choiceButton4.visibility = INVISIBLE
 
             nextPosition1 = "goNextRoom"
         }
         else{
             gamescr.gameImageView.setImageResource(R.drawable.halfbody)
-            gamescr.gameTextView.setText("You fight well but the monster is too strong for you!")
+            gamescr.gameTextView.text = "You fight well but the monster is too strong for you!"
 
-            gamescr.choiceButton1.setText("...")
+            gamescr.choiceButton1.text = "..."
 
-            gamescr.choiceButton2.setVisibility(View.INVISIBLE)
-            gamescr.choiceButton3.setVisibility(View.INVISIBLE)
-            gamescr.choiceButton4.setVisibility(View.INVISIBLE)
+            gamescr.choiceButton2.visibility = INVISIBLE
+            gamescr.choiceButton3.visibility = INVISIBLE
+            gamescr.choiceButton4.visibility = INVISIBLE
 
             nextPosition1 = "dead"
         }
@@ -189,9 +195,9 @@ class Story(val gamescr: ActivityGameScreenBinding) {
 
         gamescr.choiceButton1.setText("Try Again")
 
-        gamescr.choiceButton2.setVisibility(View.INVISIBLE)
-        gamescr.choiceButton3.setVisibility(View.INVISIBLE)
-        gamescr.choiceButton4.setVisibility(View.INVISIBLE)
+        gamescr.choiceButton2.visibility = INVISIBLE
+        gamescr.choiceButton3.visibility = INVISIBLE
+        gamescr.choiceButton4.visibility = INVISIBLE
 
         nextPosition1 = "goTitleScreen"
     }

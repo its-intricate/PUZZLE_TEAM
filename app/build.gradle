@@ -9,7 +9,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.anagram"
+        applicationId "com.example.escaperoom"
         minSdkVersion 18
         targetSdkVersion 30
         versionCode 1
