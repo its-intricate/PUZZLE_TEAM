@@ -1,4 +1,4 @@
-package com.example.escaperoom
+package com.example.escaperoom.anagram
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,9 +7,9 @@ import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
-import android.widget.*
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.example.escaperoom.R
 import com.example.escaperoom.databinding.FragmentStartBinding
 
 
@@ -20,7 +20,8 @@ class StartFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentStartBinding>(
-            inflater, R.layout.fragment_start, container, false)
+            inflater,
+            R.layout.fragment_start, container, false)
         pageView(binding)
         binding.switch1.setOnClickListener {
             if (binding.switch1.isChecked) {

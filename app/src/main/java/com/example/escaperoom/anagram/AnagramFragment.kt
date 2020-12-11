@@ -1,4 +1,4 @@
-package com.example.escaperoom
+package com.example.escaperoom.anagram
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,11 +7,11 @@ import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
-import android.widget.*
 import androidx.navigation.findNavController
 import java.util.*
 import kotlin.random.Random
 import androidx.databinding.DataBindingUtil
+import com.example.escaperoom.R
 import com.example.escaperoom.databinding.FragmentAnagramBinding
 
 
@@ -55,15 +55,24 @@ class AnagramFragment : Fragment() {
     var correctWord: String = ""
     var scrambledWord: String = ""
     private var count = 1
-    private val lockId = intArrayOf(R.id.lock1, R.id.lock2, R.id.lock3 )
-    private val unlockId = intArrayOf(R.id.unlock1, R.id.unlock2, R.id.unlock3 )
+    private val lockId = intArrayOf(
+        R.id.lock1,
+        R.id.lock2,
+        R.id.lock3
+    )
+    private val unlockId = intArrayOf(
+        R.id.unlock1,
+        R.id.unlock2,
+        R.id.unlock3
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentAnagramBinding>(
-            inflater, R.layout.fragment_anagram, container, false)
+            inflater,
+            R.layout.fragment_anagram, container, false)
         newGame()
         binding.game = this
         val input = binding.editText

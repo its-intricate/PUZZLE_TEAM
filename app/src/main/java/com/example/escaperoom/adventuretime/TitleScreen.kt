@@ -1,4 +1,4 @@
-package com.example.escaperoom
+package com.example.escaperoom.adventuretime
 
 
 
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.example.escaperoom.R
 import com.example.escaperoom.databinding.ActivityTitleScreenBinding
 
 class TitleScreen : Fragment() {
@@ -17,7 +18,8 @@ class TitleScreen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<ActivityTitleScreenBinding>(
-            inflater, R.layout.activity_title_screen, container, false)
+            inflater,
+            R.layout.activity_title_screen, container, false)
 
 
         binding.enterButton.setOnClickListener{ view: View ->

@@ -1,9 +1,9 @@
-package com.example.escaperoom
+package com.example.escaperoom.adventuretime
 
 import android.view.View
 import android.view.View.INVISIBLE
-import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.example.escaperoom.R
 import com.example.escaperoom.databinding.ActivityGameScreenBinding
 
 
