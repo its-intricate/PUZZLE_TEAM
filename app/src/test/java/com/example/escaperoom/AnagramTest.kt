@@ -1,5 +1,6 @@
 package com.example.escaperoom
 
+import com.example.escaperoom.anagram.AnagramFragment
 import org.hamcrest.CoreMatchers.instanceOf
 import org.junit.Assert.*
 import org.junit.Test

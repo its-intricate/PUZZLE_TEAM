@@ -34,6 +34,17 @@ android {
     buildFeatures {
         dataBinding true
     }
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    file("src/main/res/layout/").listFiles(),
+                    file("src/main/res/drawable/").listFiles(),
+
+                    "src/main/res"
+            ]
+        }
+    }
+
 }
 
 dependencies {

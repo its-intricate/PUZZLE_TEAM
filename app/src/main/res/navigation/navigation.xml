@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.example.escaperoom.StartFragment"
+        android:name="com.example.escaperoom.anagram.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/anagramFragment"
-        android:name="com.example.escaperoom.AnagramFragment"
+        android:name="com.example.escaperoom.anagram.AnagramFragment"
         android:label="fragment_anagram"
         tools:layout="@layout/fragment_anagram">
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/escapeRoom"
-        android:name="com.example.escaperoom.EscapeRoom"
+        android:name="com.example.escaperoom.adventuretime.EscapeRoom"
         android:label="activity_escape_room"
         tools:layout="@layout/activity_escape_room" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/titleScreen"
-        android:name="com.example.escaperoom.TitleScreen"
+        android:name="com.example.escaperoom.adventuretime.TitleScreen"
         android:label="activity_title_screen"
         tools:layout="@layout/activity_title_screen" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/gameScreen"
-        android:name="com.example.escaperoom.GameScreen"
+        android:name="com.example.escaperoom.adventuretime.GameScreen"
         android:label="activity_game_screen"
         tools:layout="@layout/activity_game_screen" >
         <action
