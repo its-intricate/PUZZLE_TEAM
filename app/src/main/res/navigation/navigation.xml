@@ -60,6 +60,14 @@
             app:destination="@id/titleScreen" />
         <action
             android:id="@+id/action_gameScreen_to_nextRoomFragment"
+            app:destination="@id/playSudokuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playSudokuFragment"
+        android:name="com.example.escaperoom.sudoku.view.PlaySudokuFragment"
+        android:label="PlaySudokuFragment" >
+        <action
+            android:id="@+id/action_playSudokuFragment_to_nextRoomFragment"
             app:destination="@id/nextRoomFragment" />
     </fragment>
 </navigation>

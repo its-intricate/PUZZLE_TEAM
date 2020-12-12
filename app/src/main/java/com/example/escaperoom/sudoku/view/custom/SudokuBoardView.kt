@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import com.example.escaperoom.sudoku.game.Cell
-import kotlinx.android.synthetic.main.activity_play_sudoku.*
+import kotlinx.android.synthetic.main.fragment_play_sudoku.*
 
 class SudokuBoardView(context: Context, attributeSet: AttributeSet) : View(context, attributeSet) {
 
@@ -16,8 +16,8 @@ class SudokuBoardView(context: Context, attributeSet: AttributeSet) : View(conte
     private var cellSizePixels = 0F
     private var noteSizePixels = 0F
 
-    private var selectedRow = 0
-    private var selectedCol = 0
+    private var selectedRow = -1
+    private var selectedCol = -1
 
     private var listener: SudokuBoardView.OnTouchListener? = null
 

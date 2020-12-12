@@ -1,7 +1,9 @@
 package com.example.escaperoom.sudoku.game
 
-import android.view.View
 import androidx.lifecycle.MutableLiveData
+import androidx.navigation.Navigation
+import com.example.escaperoom.R
+import com.example.escaperoom.databinding.FragmentPlaySudokuBinding
 
 class SudokuGame {
     var selectedCellLiveData = MutableLiveData<Pair<Int, Int>>()
@@ -93,8 +95,8 @@ class SudokuGame {
         isTakingNotesLiveData.postValue(isTakingNotes)
     }
 
-    fun complete() {
-
+    fun complete(binding: FragmentPlaySudokuBinding) {
+        Navigation.findNavController(binding.completeButton).navigate(R.id.action_playSudokuFragment_to_nextRoomFragment)
     }
 
     fun isGameComplete(): Boolean {
