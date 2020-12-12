@@ -7,7 +7,6 @@ import android.view.MotionEvent
 import android.view.View
 import com.example.escaperoom.sudoku.game.Cell
 import kotlinx.android.synthetic.main.activity_play_sudoku.*
-import java.lang.Integer.min
 
 class SudokuBoardView(context: Context, attributeSet: AttributeSet) : View(context, attributeSet) {
 
@@ -75,7 +74,7 @@ class SudokuBoardView(context: Context, attributeSet: AttributeSet) : View(conte
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-        val sizePixels = min(widthMeasureSpec, heightMeasureSpec)
+        val sizePixels = Math.min(widthMeasureSpec, heightMeasureSpec)
         setMeasuredDimension(sizePixels, sizePixels)
     }
 
