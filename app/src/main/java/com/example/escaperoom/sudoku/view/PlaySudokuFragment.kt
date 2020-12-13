@@ -100,7 +100,6 @@ class PlaySudokuFragment : Fragment(), SudokuBoardView.OnTouchListener {
                 Color.LTGRAY
             }
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
-                //button.setBackgroundColor(color)
                 button.background.colorFilter =
                     color?.let { it1 -> BlendModeColorFilter(it1, BlendMode.MULTIPLY) }
 

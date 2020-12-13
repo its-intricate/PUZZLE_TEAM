@@ -57,7 +57,7 @@ class SudokuBoardView(context: Context, attributeSet: AttributeSet) : View(conte
 
     private val startingCellTextPaint = Paint().apply {
         style = Paint.Style.FILL_AND_STROKE
-        color = Color.LTGRAY
+        color = Color.BLACK
         typeface = Typeface.DEFAULT_BOLD
     }
 
@@ -83,6 +83,7 @@ class SudokuBoardView(context: Context, attributeSet: AttributeSet) : View(conte
         fillCells(canvas)
         drawLines(canvas)
         drawText(canvas)
+        drawButtons(canvas)
     }
 
     private fun updateMeasurements(width: Int) {
@@ -193,6 +194,9 @@ class SudokuBoardView(context: Context, attributeSet: AttributeSet) : View(conte
                 )
             }
         }
+    }
+
+    fun drawButtons(canvas: Canvas) {
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
