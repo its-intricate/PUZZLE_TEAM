@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.escaperoom.databinding.ActivityMainBinding
 
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         drawerLayout = binding.drawerLayout
 
         val navController = this.findNavController(R.id.myNavHostFragment)
-        navController.navigate(R.id.startFragment)
+
+        NavigationUI.setupWithNavController(binding.navView, navController)
     }
 }
