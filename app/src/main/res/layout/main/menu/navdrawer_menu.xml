@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/enterFragment"
         android:icon="@drawable/rules"
         android:title="New Game" />
     <item
