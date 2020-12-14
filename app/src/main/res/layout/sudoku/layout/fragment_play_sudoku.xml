@@ -12,7 +12,7 @@
      <RelativeLayout
          android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".sudoku.view.PlaySudokuActivity">
+        tools:context=".sudoku.view.PlaySudokuFragment">
 
         <com.example.escaperoom.sudoku.view.custom.SudokuBoardView
             android:id="@+id/sudokuBoardView"

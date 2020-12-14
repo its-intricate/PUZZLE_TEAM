@@ -1,6 +1,6 @@
 # Escape Room Game
 
-Two rooms included:
+Three rooms included:
 - Anagram
 - Adventure Time
 - Sudoku
