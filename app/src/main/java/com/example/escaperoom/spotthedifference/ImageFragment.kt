@@ -138,7 +138,7 @@ class ImageFragment : Fragment() {
 
     private fun hintMessage(binding: FragmentImageBinding) {
         if (count == 6) {
-            binding.combination.visibility = VISIBLE
+            binding.textView10.text = "The combination is 4268."
             binding.imageView2.visibility = INVISIBLE
             binding.imageView3.visibility = INVISIBLE
             binding.d1a.visibility = INVISIBLE

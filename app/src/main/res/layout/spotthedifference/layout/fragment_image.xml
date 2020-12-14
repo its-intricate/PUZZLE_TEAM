@@ -308,8 +308,8 @@
 
         <EditText
             android:id="@+id/editText"
-            android:layout_width="266dp"
-            android:layout_height="wrap_content"
+            android:layout_width="290dp"
+            android:layout_height="74dp"
             android:autofillHints=""
             android:ems="10"
             android:fontFamily="@font/indie_flower"
@@ -327,24 +327,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/darkness"
             app:layout_constraintVertical_bias="0.286" />
-
-        <TextView
-            android:id="@+id/combination"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/cabin_sketch_bold"
-            android:text="The combination is 4268."
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.463"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3"
-            app:layout_constraintVertical_bias="0.313" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
