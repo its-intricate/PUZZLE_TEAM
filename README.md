@@ -3,6 +3,7 @@
 Two rooms included:
 - Anagram
 - Adventure Time
+- Sudoku
 
 ## Resources
 [Trello Board](https://trello.com/b/MpSqODxX/puzzle-team)
