@@ -1,6 +1,7 @@
 # Escape Room Game
 
-Three rooms included:
+Four rooms included:
+- Spot the difference
 - Anagram
 - Adventure Time
 - Sudoku
