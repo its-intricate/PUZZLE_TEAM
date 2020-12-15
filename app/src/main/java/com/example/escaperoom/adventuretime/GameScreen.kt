@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import com.example.escaperoom.R
 import com.example.escaperoom.databinding.ActivityGameScreenBinding
 
+// FRAGMENT
+
 class GameScreen : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
