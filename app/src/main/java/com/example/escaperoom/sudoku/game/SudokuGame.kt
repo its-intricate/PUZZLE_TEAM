@@ -96,7 +96,7 @@ class SudokuGame {
     }
 
     fun complete(binding: FragmentPlaySudokuBinding) {
-        Navigation.findNavController(binding.completeButton).navigate(R.id.action_playSudokuFragment_to_nextRoomFragment)
+        Navigation.findNavController(binding.completeButton).navigate(R.id.action_playSudokuFragment_to_finishPage)
     }
 
     fun isGameComplete(): Boolean {
