@@ -34,5 +34,34 @@
             app:layout_constraintVertical_bias="0.725"
             app:srcCompat="@drawable/newvase" />
 
+        <ImageView
+            android:id="@+id/sudoku_newspaper"
+            android:layout_width="96dp"
+            android:layout_height="107dp"
+            android:clickable="true"
+            android:rotation="10"
+            android:src="@mipmap/newspaper_foreground"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.841"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.833" />
+
+        <TextView
+            android:id="@+id/sudoku_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#DBD5D1"
+            android:text="Sudoku"
+            android:textSize="7sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/sudoku_newspaper"
+            app:layout_constraintEnd_toEndOf="@+id/sudoku_newspaper"
+            app:layout_constraintHorizontal_bias="0.356"
+            app:layout_constraintStart_toStartOf="@+id/sudoku_newspaper"
+            app:layout_constraintTop_toTopOf="@+id/sudoku_newspaper"
+            app:layout_constraintVertical_bias="0.463" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_escapeRoom_to_titleScreen"
             app:destination="@id/titleScreen" />
+        <action
+            android:id="@+id/action_escapeRoom_to_playSudokuFragment"
+            app:destination="@id/playSudokuFragment" />
     </fragment>
     <fragment
         android:id="@+id/titleScreen"
@@ -59,16 +62,16 @@
             android:id="@+id/action_gameScreen_to_titleScreen"
             app:destination="@id/titleScreen" />
         <action
-            android:id="@+id/action_gameScreen_to_nextRoomFragment"
-            app:destination="@id/playSudokuFragment" />
+            android:id="@+id/action_gameScreen_to_escapeRoom"
+            app:destination="@id/escapeRoom" />
     </fragment>
     <fragment
         android:id="@+id/playSudokuFragment"
         android:name="com.example.escaperoom.sudoku.view.PlaySudokuFragment"
         android:label="PlaySudokuFragment" >
         <action
-            android:id="@+id/action_playSudokuFragment_to_nextRoomFragment"
-            app:destination="@id/nextRoomFragment" />
+            android:id="@+id/action_playSudokuFragment_to_escapeRoom"
+            app:destination="@id/escapeRoom" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
