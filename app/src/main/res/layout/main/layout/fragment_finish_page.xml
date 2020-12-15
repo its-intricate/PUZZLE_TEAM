@@ -3,24 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:barrierAllowsGoneWidgets="false"
-    tools:context=".HomeFragment">
+    tools:context=".FinishPage">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/home_door" >
 
-
-        <TextView
-            android:id="@+id/enter"
-            android:layout_width="31dp"
-            android:layout_height="68dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.178"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.529" />
 
         <ImageView
             android:id="@+id/exit_sign"
@@ -34,18 +23,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.024" />
 
-        <ImageView
-            android:id="@+id/arrow"
-            android:layout_width="36dp"
-            android:layout_height="58dp"
-            app:srcCompat="@drawable/ic_baseline_arrow_upward_24"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/darkness"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.168"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.622" />
 
         <TextView
             android:id="@+id/darkness"
@@ -58,7 +35,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/logo"
+            android:id="@+id/key"
             android:layout_width="406dp"
             android:layout_height="427dp"
             android:src="@drawable/logo"
