@@ -39,7 +39,7 @@ class Story(val gamescr: ActivityGameScreenBinding) {
     }
 
     fun nextRoom(gamescr: ActivityGameScreenBinding) {
-        Navigation.findNavController(gamescr.choiceButton1).navigate(R.id.action_gameScreen_to_nextRoomFragment)
+        Navigation.findNavController(gamescr.choiceButton1).navigate(R.id.action_gameScreen_to_escapeRoom)
 
     }
 

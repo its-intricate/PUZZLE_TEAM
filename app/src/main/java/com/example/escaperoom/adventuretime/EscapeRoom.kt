@@ -25,6 +25,16 @@ class EscapeRoom : Fragment() {
             view.findNavController().navigate(R.id.action_escapeRoom_to_titleScreen)
         }
 
+        binding.sudokuNewspaper.setOnClickListener {
+            view: View ->
+            view.findNavController().navigate(R.id.action_escapeRoom_to_playSudokuFragment)
+        }
+
+        binding.sudokuTitle.setOnClickListener {
+            view: View ->
+            view.findNavController().navigate(R.id.action_escapeRoom_to_playSudokuFragment)
+        }
+
         return binding.root
     }
 }
