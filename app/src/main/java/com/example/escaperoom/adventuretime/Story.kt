@@ -6,6 +6,7 @@ import androidx.navigation.Navigation
 import com.example.escaperoom.R
 import com.example.escaperoom.databinding.ActivityGameScreenBinding
 
+// ACTIVITY
 
 class Story(val gamescr: ActivityGameScreenBinding) {
 

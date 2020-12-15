@@ -9,6 +9,8 @@ import androidx.navigation.ui.NavigationUI
 import com.example.escaperoom.databinding.ActivityMainBinding
 
 
+//ACTIVITY
+
 class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     override fun onCreate(savedInstanceState: Bundle?) {
