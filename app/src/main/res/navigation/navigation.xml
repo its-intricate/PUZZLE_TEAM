@@ -101,5 +101,9 @@
         android:id="@+id/finishPage"
         android:name="com.example.escaperoom.FinishPage"
         android:label="fragment_finish_page"
-        tools:layout="@layout/fragment_finish_page" />
+        tools:layout="@layout/fragment_finish_page" >
+        <action
+            android:id="@+id/action_finishPage_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

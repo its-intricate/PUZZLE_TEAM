@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.escaperoom.databinding.FragmentFinishPageBinding
 
 
@@ -18,6 +19,11 @@ class FinishPage : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentFinishPageBinding>(
         inflater, R.layout.fragment_finish_page, container, false)
+
+        binding.replayButton.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_finishPage_to_homeFragment)
+        }
+
         return binding.root
     }
 
