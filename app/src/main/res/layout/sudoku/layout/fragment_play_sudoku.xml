@@ -9,8 +9,8 @@
             type="com.example.escaperoom.sudoku.view.PlaySudokuFragment" />
     </data>
 
-     <RelativeLayout
-         android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".sudoku.view.PlaySudokuFragment">
 
@@ -18,7 +18,8 @@
             android:id="@+id/sudokuBoardView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/buttonsLayout" />
+            android:layout_above="@+id/buttonsLayout"
+            android:layout_centerHorizontal="true" />
 
         <GridLayout
             android:id="@+id/buttonsLayout"
@@ -26,7 +27,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
             android:columnCount="4"
+            android:paddingLeft="50dp"
             android:rowCount="4">
 
             <ImageButton
