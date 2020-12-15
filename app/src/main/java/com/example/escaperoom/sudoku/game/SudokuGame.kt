@@ -85,7 +85,8 @@ class SudokuGame {
         cellsLiveData.postValue(board.cells)
     }
 
-    fun exit() {
+    fun exit(binding: FragmentPlaySudokuBinding) {
+        /*
         var cells = List(9 * 9) {i -> Cell(i / 9, i % 9, 0)}
         cells = setStartingState(cells)
         board = Board(9, cells)
@@ -93,6 +94,9 @@ class SudokuGame {
         selectedCellLiveData.postValue(Pair(selectedRow, selectedColumn))
         cellsLiveData.postValue(board.cells)
         isTakingNotesLiveData.postValue(isTakingNotes)
+        */
+        Navigation.findNavController(binding.exitButton).navigate(R.id.action_playSudokuFragment_to_escapeRoom)
+
     }
 
     fun complete(binding: FragmentPlaySudokuBinding) {

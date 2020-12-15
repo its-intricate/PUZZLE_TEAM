@@ -55,7 +55,7 @@ class PlaySudokuFragment : Fragment(), SudokuBoardView.OnTouchListener {
 
         binding.notesButton.setOnClickListener { viewModel.sudokuGame.changeNoteTakingState() }
         binding.deleteButton.setOnClickListener { viewModel.sudokuGame.delete() }
-        binding.exitButton.setOnClickListener { viewModel.sudokuGame.exit() }
+        binding.exitButton.setOnClickListener { viewModel.sudokuGame.exit(binding) }
         binding.completeButton.setOnClickListener { viewModel.sudokuGame.complete(binding) }
 
         return binding.root

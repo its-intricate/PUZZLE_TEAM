@@ -72,6 +72,9 @@
         <action
             android:id="@+id/action_playSudokuFragment_to_finishPage"
             app:destination="@id/finishPage" />
+        <action
+            android:id="@+id/action_playSudokuFragment_to_escapeRoom"
+            app:destination="@id/escapeRoom" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
