@@ -18,10 +18,9 @@ import com.example.escaperoom.databinding.FragmentAnagramBinding
 class AnagramFragment : Fragment() {
 
     private val wordList = arrayOf(
-        "ACCOUNT", "ADDITION", "AGREEMENT", "ANGRY", "ANIMAL", "BEHAVIOUR", "BETWEEN", "BLACK",
-        "CHEMICAL", "FOOLISH", "FREQUENT", "GOVERNMENT", "GRAIN", "GRASS", "HOSPITAL",
-        "PAYMENT", "POLITICAL", "PROCESS", "SHAME", "SMASH", "SMOOTH", "STATEMENT", "SUBSTANCE",
-        "TEACHING", "TENDENCY", "TOMORROW", "TOUCH", "UMBRELLA", "WEATHER", "YESTERDAY"
+        "DIM", "BLEAK", "DARKNESS", "SWITCH", "LIGHT", "CLARITY", "BLACK",
+        "PHOSPHOR", "ULTRAVIOLET", "SHADOW", "MOON", "SUN", "STARS", "FIRE", "FLAME", "TORCH",
+        "ILLUMINATE", "BEAM", "WEATHER", "VISION"
     )
 
     private fun randomWord(): String {

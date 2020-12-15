@@ -70,8 +70,8 @@
         android:name="com.example.escaperoom.sudoku.view.PlaySudokuFragment"
         android:label="PlaySudokuFragment" >
         <action
-            android:id="@+id/action_playSudokuFragment_to_escapeRoom"
-            app:destination="@id/escapeRoom" />
+            android:id="@+id/action_playSudokuFragment_to_finishPage"
+            app:destination="@id/finishPage" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -100,4 +100,9 @@
             android:id="@+id/action_imageFragment_to_startFragment"
             app:destination="@id/startFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/finishPage"
+        android:name="com.example.escaperoom.FinishPage"
+        android:label="fragment_finish_page"
+        tools:layout="@layout/fragment_finish_page" />
 </navigation>
