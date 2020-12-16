@@ -102,4 +102,8 @@
         android:name="com.example.escaperoom.FinishPage"
         android:label="fragment_finish_page"
         tools:layout="@layout/fragment_finish_page" />
+    <fragment
+        android:id="@+id/picturePuzzle"
+        android:name="com.example.escaperoom.picturePuzzle.PicturePuzzle"
+        android:label="PicturePuzzle" />
 </navigation>

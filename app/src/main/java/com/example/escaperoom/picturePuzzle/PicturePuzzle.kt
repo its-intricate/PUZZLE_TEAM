@@ -6,15 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
-import android.view.ViewTreeObserver
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.StringRes
 import com.example.escaperoom.picturePuzzle.GestureDetectGridView.OnSwipeListener
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.escaperoom.R
+import com.example.escaperoom.databinding.PuzzlePictureBinding
 import kotlinx.android.synthetic.main.puzzle_picture.*
 import java.util.*
 
@@ -49,7 +48,7 @@ class PicturePuzzle : Fragment() {
             return solved
         }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreate(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val binding = DataBindingUtil.inflate<PuzzlePictureBinding>(
                 inflater,
@@ -57,18 +56,18 @@ class PicturePuzzle : Fragment() {
                 container,
                 false
         )
-
+        binding.game = this
 
         super.onCreate(savedInstanceState)
 
-        init()
-        scrambleTileBoard()
-        setTileBoardDimensions()
+        init(binding)
+        scrambleTileBoard(binding)
+        setTileBoardDimensions(binding)
 
         return binding.root
     }
 
-    private fun init() {
+    private fun init(binding: PuzzlePictureBinding) {
 
         gesture_detect_grid_view.apply {
             numColumns = TOTAL_COLUMNS
@@ -95,7 +94,7 @@ class PicturePuzzle : Fragment() {
         }
     }
 
-    private fun setTileBoardDimensions() {
+    private fun setTileBoardDimensions(binding: PuzzlePictureBinding) {
         val observer = gesture_detect_grid_view.viewTreeObserver
         observer.addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
             override fun onGlobalLayout() {
@@ -103,8 +102,8 @@ class PicturePuzzle : Fragment() {
 
                 val displayWidth = gesture_detect_grid_view.measuredWidth
                 val displayHeight = gesture_detect_grid_view.measuredHeight
-                val statusbarHeight = getStatusBarHeight(applicationContext)
-                val requiredHeight = displayHeight - statusbarHeight
+                val statusbarHeight = binding.game.context?.let { getStatusBarHeight(it) }
+                val requiredHeight = displayHeight - statusbarHeight!!
 
                 boardColumnWidth = displayWidth / TOTAL_COLUMNS
                 boardColumnHeight = requiredHeight / TOTAL_COLUMNS
@@ -136,15 +135,15 @@ class PicturePuzzle : Fragment() {
             tileImage = ImageView(this)
 
             when (i) {
-                0 -> tileImage.setBackgroundResource(R.drawable.picturePuzzle.p1)
-                1 -> tileImage.setBackgroundResource(R.drawable.picturePuzzle.p2)
-                2 -> tileImage.setBackgroundResource(R.drawable.picturePuzzle.p3)
-                3 -> tileImage.setBackgroundResource(R.drawable.picturePuzzle.p4)
-                4 -> tileImage.setBackgroundResource(R.drawable.picturePuzzle.p5)
-                5 -> tileImage.setBackgroundResource(R.drawable.picturePuzzle.p6)
-                6 -> tileImage.setBackgroundResource(R.drawable.picturePuzzle.p7)
-                7 -> tileImage.setBackgroundResource(R.drawable.picturePuzzle.p8)
-                8 -> tileImage.setBackgroundResource(R.drawable.picturePuzzle.p9)
+                0 -> tileImage.setBackgroundResource(R.drawable.p1)
+                1 -> tileImage.setBackgroundResource(R.drawable.p2)
+                2 -> tileImage.setBackgroundResource(R.drawable.p3)
+                3 -> tileImage.setBackgroundResource(R.drawable.p4)
+                4 -> tileImage.setBackgroundResource(R.drawable.p5)
+                5 -> tileImage.setBackgroundResource(R.drawable.p6)
+                6 -> tileImage.setBackgroundResource(R.drawable.p7)
+                7 -> tileImage.setBackgroundResource(R.drawable.p8)
+                8 -> tileImage.setBackgroundResource(R.drawable.p9)
             }
 
             tileImages.add(tileImage)
