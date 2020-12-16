@@ -70,7 +70,7 @@ class PicturePuzzle : Fragment() {
 
     private fun init(binding: PuzzlePictureBinding) {
 
-        gesture_detect_grid_view.apply {
+        binding.gestureDetectGridView.apply {
             numColumns = TOTAL_COLUMNS
             setOnSwipeListener(object : OnSwipeListener {
                 override fun onSwipe(direction: SwipeDirections, position: Int) {
@@ -96,14 +96,14 @@ class PicturePuzzle : Fragment() {
     }
 
     private fun setTileBoardDimensions(binding: PuzzlePictureBinding) {
-        val observer = gesture_detect_grid_view.viewTreeObserver
+        val observer = binding.gestureDetectGridView.viewTreeObserver
         observer.addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
             override fun onGlobalLayout() {
-                gesture_detect_grid_view.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                binding.gestureDetectGridView.viewTreeObserver.removeOnGlobalLayoutListener(this)
 
-                val displayWidth = gesture_detect_grid_view.measuredWidth
-                val displayHeight = gesture_detect_grid_view.measuredHeight
-                val statusbarHeight = binding.game.context?.let { getStatusBarHeight(it) }
+                val displayWidth = binding.gestureDetectGridView.measuredWidth
+                val displayHeight = binding.gestureDetectGridView.measuredHeight
+                val statusbarHeight = binding.game?.context?.let { getStatusBarHeight(it) }
                 val requiredHeight = displayHeight - statusbarHeight!!
 
                 boardColumnWidth = displayWidth / TOTAL_COLUMNS
@@ -133,7 +133,7 @@ class PicturePuzzle : Fragment() {
         var tileImage: ImageView
 
         tileListIndexes.forEach { i ->
-            tileImage = ImageView(binding.game.context)
+            tileImage = ImageView(binding.game?.context)
 
             when (i) {
                 0 -> tileImage.setBackgroundResource(R.drawable.p1)
@@ -154,7 +154,7 @@ class PicturePuzzle : Fragment() {
     }
 
     private fun displayToast(binding: PuzzlePictureBinding ,@StringRes textResId: Int) {
-        Toast.makeText(binding.game.context, getString(textResId), Toast.LENGTH_SHORT).show()
+        Toast.makeText(binding.game?.context, getString(textResId), Toast.LENGTH_SHORT).show()
     }
 
     private fun moveTiles(binding: PuzzlePictureBinding, direction: SwipeDirections, position: Int) {
