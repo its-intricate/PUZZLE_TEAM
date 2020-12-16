@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_startFragment_to_anagramFragment"
             app:destination="@id/anagramFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_picturePuzzle"
+            app:destination="@id/picturePuzzle" />
     </fragment>
     <fragment
         android:id="@+id/anagramFragment"
@@ -105,5 +108,9 @@
     <fragment
         android:id="@+id/picturePuzzle"
         android:name="com.example.escaperoom.picturePuzzle.PicturePuzzle"
-        android:label="PicturePuzzle" />
+        android:label="PicturePuzzle" >
+        <action
+            android:id="@+id/action_picturePuzzle_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
 </navigation>
