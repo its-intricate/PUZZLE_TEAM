@@ -34,6 +34,9 @@ class StartFragment : Fragment() {
                 binding.darkness.visibility = VISIBLE
             }
         }
+        binding.hangman.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_startFragment_to_gameScreen2)
+        }
         return binding.root
     }
 

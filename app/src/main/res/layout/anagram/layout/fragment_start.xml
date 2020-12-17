@@ -27,6 +27,23 @@
             app:layout_constraintVertical_bias="0.626" />
 
         <TextView
+            android:id="@+id/hangman"
+            android:layout_width="56dp"
+            android:layout_height="58dp"
+            android:fontFamily="@font/concert_one"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="45sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.459"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.169" />
+
+        <TextView
             android:id="@+id/darkness"
             android:layout_width="0dp"
             android:layout_height="0dp"

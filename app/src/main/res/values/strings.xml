@@ -8,4 +8,11 @@
     <string name="unlock">unlock</string>
     <string name="next_room">NEXT ROOM</string>
     <string name="start">START CHALLENGE</string>
+
+
+    <string name="popup_lose_title">Ouch!</string>
+    <string name="popup_lose_desc">Unfortunetly you were not able to guess the word before the man was hung... Try again.</string>
+
+    <string name="popup_win_title">Congratulations!</string>
+    <string name="popup_win_desc">You have completed this stage and can proceed to the next, Well done!</string>
 </resources>

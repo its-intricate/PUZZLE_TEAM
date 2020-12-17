@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_startFragment_to_anagramFragment"
             app:destination="@id/anagramFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_gameScreen2"
+            app:destination="@id/gameScreen2" />
     </fragment>
     <fragment
         android:id="@+id/anagramFragment"
@@ -117,4 +120,13 @@
         android:name="com.example.escaperoom.Splash"
         android:label="activity_splash"
         tools:layout="@layout/activity_splash" />
+    <fragment
+        android:id="@+id/gameScreen2"
+        android:name="com.example.escaperoom.hangman.GameScreen"
+        android:label="fragment_game_screen"
+        tools:layout="@layout/fragment_game_screen" >
+        <action
+            android:id="@+id/action_gameScreen2_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
 </navigation>
