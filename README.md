@@ -1,7 +1,8 @@
 # Escape Room Game
 
-Five rooms included:
+Six puzzles included:
 - Spot the difference
+- Hangman
 - Picture Puzzle
 - Anagram
 - Adventure Time
