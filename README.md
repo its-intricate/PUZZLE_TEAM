@@ -1,5 +1,7 @@
 # Escape Room Game
 
+[Download](https://github.com/its-intricate/Puzzle_Team_Final_Project/raw/master/app-release.apk)
+
 Six puzzles included:
 - Spot the difference
 - Hangman
