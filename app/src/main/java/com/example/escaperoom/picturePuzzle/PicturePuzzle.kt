@@ -70,7 +70,7 @@ class PicturePuzzle : Fragment() {
 
     private fun init(binding: PuzzlePictureBinding) {
 
-        gesture_detect_grid_view.apply {
+        binding.gestureDetectGridView.apply {
             numColumns = TOTAL_COLUMNS
             setOnSwipeListener(object : OnSwipeListener {
                 override fun onSwipe(direction: SwipeDirections, position: Int) {
