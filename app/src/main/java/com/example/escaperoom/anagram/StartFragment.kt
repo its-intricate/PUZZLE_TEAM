@@ -36,8 +36,11 @@ class StartFragment : Fragment() {
         }
 
         binding.picture.setOnClickListener { view: View ->
-
             view.findNavController().navigate(R.id.action_startFragment_to_picturePuzzle)
+        }
+
+        binding.hangman.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_startFragment_to_gameScreen2)
         }
         return binding.root
     }
