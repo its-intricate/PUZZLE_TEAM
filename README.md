@@ -1,7 +1,8 @@
 # Escape Room Game
 
-Four rooms included:
+Five rooms included:
 - Spot the difference
+- Picture Puzzle
 - Anagram
 - Adventure Time
 - Sudoku
