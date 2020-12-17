@@ -238,9 +238,9 @@ class PicturePuzzle : Fragment() {
         displayTileBoard(binding)
 
         if (isSolved) {
+            displayToast(binding, R.string.winner)
             binding.clue.visibility = VISIBLE
             binding.button.visibility = VISIBLE
-            displayToast(binding, R.string.winner)
             binding.button.setOnClickListener {view: View ->
                 view?.findNavController()?.navigate(R.id.action_picturePuzzle_to_startFragment)
             }

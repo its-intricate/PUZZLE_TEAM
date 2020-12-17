@@ -9,4 +9,15 @@
     <color name="white">#FFFFFFFF</color>
     <color name="sudoku_exit_red">#88FF9999</color>
     <color name="sudoku_complete_yellow">#DDFFDF00</color>
+
+    <color name="colorPrimary">#0B0B0B</color>
+    <color name="colorPrimaryDark">#6d749f</color>
+    <color name="colorRed">#ff3943</color>
+    <color name="colorRedDark">#801b20</color>
+    <color name="colorGreenLight">#abffc0</color>
+    <color name="colorGreen">#247b37</color>
+    <color name="colorGreen1">#3eb959</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>
