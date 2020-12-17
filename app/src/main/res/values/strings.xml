@@ -8,4 +8,6 @@
     <string name="unlock">unlock</string>
     <string name="next_room">NEXT ROOM</string>
     <string name="start">START CHALLENGE</string>
+    <string name="invalid_move">Invalid move</string>
+    <string name="winner">Success</string>
 </resources>

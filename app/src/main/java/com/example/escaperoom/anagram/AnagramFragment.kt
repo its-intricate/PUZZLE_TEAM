@@ -7,6 +7,7 @@ import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.findNavController
 import java.util.*
 import kotlin.random.Random
@@ -80,8 +81,8 @@ class AnagramFragment : Fragment() {
             view : View ->
             var answer = input.text.toString().toUpperCase(Locale.ROOT)
             if (validate(answer)) {
-//                Toast.makeText(this, "Congratulations! You found the word $correctWord", Toast.LENGTH_LONG
-//                ).show()
+                Toast.makeText(this.context, "Congratulations! You found the word $correctWord", Toast.LENGTH_LONG
+                ).show()
                 unlock(binding)
                 count++
                 if (count <= 3) {
@@ -91,7 +92,7 @@ class AnagramFragment : Fragment() {
                     view.findNavController().navigate(R.id.action_anagramFragment_to_nextRoomFragment)
                 }
             } else {
-//                Toast.makeText(this, "Retry !", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this.context, "Retry !", Toast.LENGTH_SHORT).show()
             }
             input.setText("")
         }

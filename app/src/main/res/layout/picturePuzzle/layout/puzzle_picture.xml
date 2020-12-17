@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <data>
+            <variable
+                name="game"
+                type="com.example.escaperoom.picturePuzzle.PicturePuzzle" />
+        </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/pframe">
+
+        <TextView
+            android:id="@+id/clue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cabin_sketch_bold"
+            android:text="CLUE: The theme is light!"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:translationY="-100sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/gesture_detect_grid_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="192dp"
+            android:layout_height="53dp"
+            android:fontFamily="@font/concert_one"
+            android:text="Back to Room"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.escaperoom.picturePuzzle.GestureDetectGridView
+            android:id="@+id/gesture_detect_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="picturePuzzle.PicturePuzzle"
+            tools:layout_editor_absoluteX="58dp"
+            tools:layout_editor_absoluteY="-27dp">
+
+        </com.example.escaperoom.picturePuzzle.GestureDetectGridView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
