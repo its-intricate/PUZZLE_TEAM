@@ -34,6 +34,11 @@ class StartFragment : Fragment() {
                 binding.darkness.visibility = VISIBLE
             }
         }
+
+        binding.picture.setOnClickListener { view: View ->
+
+            view.findNavController().navigate(R.id.action_startFragment_to_picturePuzzle)
+        }
         return binding.root
     }
 
