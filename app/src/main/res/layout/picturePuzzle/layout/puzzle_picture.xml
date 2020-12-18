@@ -21,6 +21,7 @@
             android:fontFamily="@font/concert_one"
             android:text="Back to Room"
             android:textSize="20sp"
+            android:translationY="-100sp"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -32,8 +33,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context="picturePuzzle.PicturePuzzle"
-            tools:layout_editor_absoluteX="58dp"
-            tools:layout_editor_absoluteY="-27dp">
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-62dp">
 
         </com.example.escaperoom.picturePuzzle.GestureDetectGridView>
 
